@@ -14,10 +14,11 @@ public class BookingService {
     @Autowired
     BookingRepo bookingRepo;
 
-    public void addBooking(Booking booking) {
+    public Booking addBooking(Booking booking) {
         //some logics are implemented by hibernate, so 'save' logic is gifted hibernate.
         bookingRepo.save(booking);
 
+        return booking;
     }
 
     public List<Booking> getAllBookings(){
@@ -31,5 +32,9 @@ public class BookingService {
 
     public Optional<Booking> findByCategory(String category){
         return bookingRepo.findByCategory(category);
+    }
+
+    public List<Booking> findByLocation(String location){
+        return bookingRepo.findByLocation(location);
     }
 }

@@ -1,11 +1,11 @@
 package com.dt.learningtrial.learningtrialbookingjpa.api;
 
+import com.dt.learningtrial.learningtrialbookingjpa.entities.Booking;
 import com.dt.learningtrial.learningtrialbookingjpa.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/booking")
@@ -14,13 +14,31 @@ public class BookingApi {
     @Autowired
     BookingService bookingService;
 
-    @GetMapping("/hello")
-    public String getBookingHomeEndPoint(){
-            return "Hello Guests";
+    @PostMapping("/SaveBooking/{dummyPathVariable}")
+    public Booking experimentOfPostMethod(@PathVariable("dummyPathVariable") String bookingName,
+                                         @RequestParam(value="dummy",required = false) String dummy,
+                                         @RequestBody Booking booking
+                                         ){
+
+        return bookingService.addBooking(booking);
+
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "hello2")
-    public String getBookingHomeEndPoint2(){
-        return "Hello Guests";
+    @GetMapping("/allBookings")
+    public List<Booking> getAllBookings() {
+
+        return bookingService.getAllBookings();
+
     }
+
+    @GetMapping("/getBookingByLocation/{byLocation}")
+    public List<Booking> getBookingByLocation(@PathVariable("byLocation") String location){
+        return bookingService.findByLocation(location);
+    }
+
+    @GetMapping("/getBookingByLocationUsingReqParam")
+    public List<Booking> getBookingByLocationUsingReqParam(@RequestParam String location){
+        return bookingService.findByLocation(location);
+    }
+
 }
