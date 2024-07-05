@@ -1,4 +1,4 @@
-package com.dt.learningtrial.learningtrialbookingjpa.entities;
+package com.dt.learningtrial.learningtrialbookingjpa.july02.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,17 +10,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Builder
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Booking {
+@NoArgsConstructor
+@Builder
+public class Answer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long bookingId;
-    private String category;
-    private String name;
-    private String location;
-    private double totalCharge;
+    private Long answerId;
+    private String answer;
 }

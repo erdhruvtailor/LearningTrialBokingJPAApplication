@@ -1,7 +1,7 @@
-package com.dt.learningtrial.learningtrialbookingjpa.service;
+package com.dt.learningtrial.learningtrialbookingjpa.june18and23.service;
 
-import com.dt.learningtrial.learningtrialbookingjpa.entities.Booking;
-import com.dt.learningtrial.learningtrialbookingjpa.repository.BookingRepo;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.entities.Booking;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.repository.BookingRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

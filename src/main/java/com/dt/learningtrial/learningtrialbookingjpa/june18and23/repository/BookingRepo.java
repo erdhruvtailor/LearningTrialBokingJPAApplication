@@ -1,6 +1,6 @@
-package com.dt.learningtrial.learningtrialbookingjpa.repository;
+package com.dt.learningtrial.learningtrialbookingjpa.june18and23.repository;
 
-import com.dt.learningtrial.learningtrialbookingjpa.entities.Booking;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.entities.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

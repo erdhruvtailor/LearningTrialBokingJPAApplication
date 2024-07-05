@@ -1,4 +1,4 @@
-package com.dt.learningtrial.learningtrialbookingjpa.dto;
+package com.dt.learningtrial.learningtrialbookingjpa.june18and23.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

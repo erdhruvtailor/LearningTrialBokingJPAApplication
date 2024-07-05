@@ -1,7 +1,7 @@
 package com.dt.learningtrial.learningtrialbookingjpa;
 
-import com.dt.learningtrial.learningtrialbookingjpa.entities.Booking;
-import com.dt.learningtrial.learningtrialbookingjpa.service.BookingService;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.entities.Booking;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.service.BookingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,7 +1,7 @@
-package com.dt.learningtrial.learningtrialbookingjpa.api;
+package com.dt.learningtrial.learningtrialbookingjpa.june18and23.api;
 
-import com.dt.learningtrial.learningtrialbookingjpa.entities.Booking;
-import com.dt.learningtrial.learningtrialbookingjpa.service.BookingService;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.entities.Booking;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.service.BookingService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

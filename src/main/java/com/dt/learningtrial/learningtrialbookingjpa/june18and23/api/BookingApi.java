@@ -1,11 +1,10 @@
-package com.dt.learningtrial.learningtrialbookingjpa.api;
+package com.dt.learningtrial.learningtrialbookingjpa.june18and23.api;
 
-import com.dt.learningtrial.learningtrialbookingjpa.entities.Booking;
-import com.dt.learningtrial.learningtrialbookingjpa.service.BookingService;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.entities.Booking;
+import com.dt.learningtrial.learningtrialbookingjpa.june18and23.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/booking")
@@ -16,8 +15,8 @@ public class BookingApi {
 
     @PostMapping("/SaveBooking/{dummyPathVariable}")
     public Booking experimentOfPostMethod(@PathVariable("dummyPathVariable") String bookingName,
-                                         @RequestParam(value="dummy",required = false) String dummy,
-                                         @RequestBody Booking booking
+                                          @RequestParam(value="dummy",required = false) String dummy,
+                                          @RequestBody Booking booking
                                          ){
 
         return bookingService.addBooking(booking);
